@@ -13,14 +13,14 @@ var reverseWords = function(s) {
     let returnVal ='';
     const tmp = s.split(" ");
 
-    tmp.forEach((element, idx) => {
+    tmp.forEach((element) => {
         const wordInArr = element.split("");
         let tmpWord ='';
         for (let i = wordInArr.length-1; i >= 0; i--) {
             tmpWord += wordInArr[i];
         }
         returnVal += tmpWord;
-        if(tmp.length-1 != idx){
+        if(element != tmp.at(-1)){
             returnVal += ' ';
         }
     });
