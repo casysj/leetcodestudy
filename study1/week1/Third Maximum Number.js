@@ -8,34 +8,32 @@ var thirdMax = function (nums) {
     let currentNum;
     let count = 0;
     nums.every(element => {
-        if(element != currentNum){
+        if (element != currentNum) {
             count++;
             currentNum = element;
         }
-        if(count == 3){
+        if (count == 3) {
             return false;
         }
         return true;
     });
-    if(count == 3){
+    if (count == 3) {
         return currentNum;
-    }else {
+    } else {
         return nums[0];
     }
 };
 
 var sort = function (arr, left, right) {
-    if(left>=right){
+    if (left >= right) {
         return;
     }
-    const index = partition(arr,left,right);
-    if (left < index - 1) 
-    {
+    const index = partition(arr, left, right);
+    if (left < index - 1) {
         sort(arr, left, index - 1);
     }
 
-    if (index < right) 
-    {
+    if (index < right) {
         sort(arr, index, right);
     }
 }
@@ -43,7 +41,7 @@ var sort = function (arr, left, right) {
 
 var partition = function (arr, left, right) {
     let pivotVal = arr[Math.floor((left + right) / 2)];
-    while(left <= right) {
+    while (left <= right) {
 
         while (pivotVal < arr[left]) {
             left++;
