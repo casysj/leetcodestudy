@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number}
  */
+/**
+ *  아직 잘 모르겠습니다..
+ */
 var thirdMax = function (nums) {
 
     sort(nums, 0, nums.length - 1);
