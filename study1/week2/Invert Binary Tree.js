@@ -16,7 +16,7 @@
  * root의 크기에 따라 비례적으로 증가할것
  */
 var invertTree = function (root) {
-    if(!root) return null;
+    if (!root) return null;
 
     if (root.left != null && root.right != null) {
         invertTree(root.left);
