@@ -21,21 +21,14 @@ var invertTree = function (root) {
     if (root.left != null && root.right != null) {
         invertTree(root.left);
         invertTree(root.right);
-        rootSwap(root);
+        [root.left, root.right] = [root.right, root.left]
     } else if (root.left == null && root.right != null) {
         invertTree(root.right);
-        rootSwap(root);
+        [root.left, root.right] = [root.right, root.left]
     } else if (root.left != null && root.right == null) {
         invertTree(root.left);
-        rootSwap(root);
+        [root.left, root.right] = [root.right, root.left]
     }
 
     return root;
 };
-
-var rootSwap = function (root) {
-    let tmpNode = null;
-    tmpNode = root.left;
-    root.left = root.right;
-    root.right = tmpNode;
-}
