@@ -7,7 +7,7 @@
 *	공간복잡도 : O(1) n의 크기와 상관없이 3개의 변수만 사용된다.
 */
 
-var climbStairs = function(n) {
+var climbStairs = function (n) {
     if (n === 1 || n === 0) return 1;
 
     let one = 1;
