@@ -11,7 +11,7 @@ var rotate = function (matrix) {
     let storeTemp1;
     let storeTemp2;
     let startRow = 0
-    let endRow = matrix[0].length-1;
+    let endRow = matrix[0].length - 1;
     let i = 0;
     while (startRow < endRow) {
         storeTemp1 = matrix[startRow + i][endRow];
