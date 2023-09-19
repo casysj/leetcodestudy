@@ -5,7 +5,7 @@
  */
 /**
 *	시간복잡도 : O(logn) 이진탐색의 기본값 logn
-*	공간복잡도 : O(1) nums의 크기와 상관없이 고정된 변수의 갯수만 사용
+*	공간복잡도 : O(1) nums의 크기와 상관없이 고정된 변수의 갯수만 사용.
 */
 
 var search = function (nums, target) {
