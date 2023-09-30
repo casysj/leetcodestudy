@@ -15,7 +15,7 @@ var maxSlidingWindow = function (nums, k) {
         const cur = nums[i];
         
         // 큐에서 현재 요소 cur보다 작거나 같은 값을 제거 
-        // 이를통해 최대값, 그다음값 이런식으로 q에 쌓이게 된다
+        // 이를통해 최대값, 그다음값 이런식으로 q에 쌓이게 된다.
         while (q.length > 0 && nums[q[q.length - 1]] <= cur) {
             q.pop();
         }
